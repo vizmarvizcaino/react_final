@@ -10,7 +10,7 @@ import '../material-ui/materialui.css';
 
 export default function ImgMediaCard() {
   return (
-    <Card sx={{ maxWidth: 345 }} className='card' >
+    <Card sx={{ maxWidth: 345 }} className='card'>
       <CardMedia
         className='card-image'
         component="img"

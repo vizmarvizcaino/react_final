@@ -1,8 +1,8 @@
 .card {
-    background-color: transparent;
-    color: white;
+    background-color: transparent !important;
+    color: white !important;
 }
 
 .card-image {
-    height: 17rem;
+    height: 17rem !important;
 }
