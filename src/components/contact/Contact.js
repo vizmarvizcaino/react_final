@@ -1,9 +1,12 @@
 import React from 'react'
 import './contact.css'
+import FormularioPrincipal from '../contact/formulario/FormularioPrincipal'
 
 const Contact = () => {
   return (
-    <section id='contact'>contact</section>
+    <section id='contact'>contact
+    <FormularioPrincipal />
+    </section>
   )
 }
 

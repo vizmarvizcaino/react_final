@@ -59,14 +59,14 @@ const Portfolio = () => {
           <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
         </article>
 
-        <article className="portfolio__item">
+        {/* <article className="portfolio__item">
           <div className="potfolio__item-image">
             <img src={ Img1 } alt="img1" />
           </div>
           <h3>This is a portfolio</h3>
           <a href="https://github.com" className='btn' target='_blank'>Github</a>
           <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
+        </article> */}
         <MaterialCard />
       </div>
     </section>

@@ -8,6 +8,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import AppRoute from './components/routes/AppRoute';
 
 
 
@@ -20,9 +21,11 @@ function App() {
     <Experience />
     <Services /> */}
     <Portfolio />
-    {/* <Testimonials />
+    {/* <Testimonials /> */}
     <Contact />
-    <Footer /> */}
+    {/* <Footer /> */}
+
+  
     
     </>
   );
