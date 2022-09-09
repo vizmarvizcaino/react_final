@@ -37,18 +37,18 @@ const GrupoInput = styled.div`
 const Input = styled.input`
     width: 100%;
     background: #fff;
+    background-color: green;
     border-radius: 3px;
     height: 45px;
     line-height: 45px;
     padding: 0 40px 0 10px;
     transition: .3s easy all;
-    border: 3px solid transparent;
+    border: 3px solid var(--color-white);
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url({ImgTexture});
 
     &:focus{
         border: 3px solid ${colores.borde};

@@ -17,15 +17,15 @@ function App() {
     <>
     <Header />
     <Nav />
-    {/* <About />
+    <About />
     <Experience />
-    <Services /> */}
+    <Services />
     <Portfolio />
     {/* <Testimonials /> */}
-    <Contact />
+    {/* <Contact /> */}
     {/* <Footer /> */}
 
-  
+    <AppRoute />
     
     </>
   );

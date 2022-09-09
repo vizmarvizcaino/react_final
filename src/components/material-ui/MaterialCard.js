@@ -14,7 +14,7 @@ export default function ImgMediaCard() {
       <CardMedia
         className='card-image'
         component="img"
-        alt="green iguana"
+        alt=""
         height="140"
         image={Img6}
       />
@@ -28,7 +28,7 @@ export default function ImgMediaCard() {
       </CardContent>
       <CardActions>
         <a href="https://github.com" className='btn' target='_blank'>Github</a>
-        <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
+        <a href="https://vercel.com" className='btn' target='_blank'>Proyects</a>
       </CardActions>
     </Card>
   );

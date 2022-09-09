@@ -10,63 +10,15 @@ import MaterialCard from '../material-ui/MaterialCard'
 const Portfolio = () => {
   return (
     <section id='portfolio'>
-      <h5>My Recent</h5>
-      <h2>Portfolio</h2>
+      <h5>Mi Reciente</h5>
+      <h2>Portafolio</h2>
 
       <div className="container portfolio__container">
-        <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img1 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img2 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img3 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img4 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img5 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article>
-
-        {/* <article className="portfolio__item">
-          <div className="potfolio__item-image">
-            <img src={ Img1 } alt="img1" />
-          </div>
-          <h3>This is a portfolio</h3>
-          <a href="https://github.com" className='btn' target='_blank'>Github</a>
-          <a href="https://vercel.com" className='btn' target='_blank'>Demo Proyects</a>
-        </article> */}
+        <MaterialCard />
+        <MaterialCard />
+        <MaterialCard />
+        <MaterialCard />
+        <MaterialCard />
         <MaterialCard />
       </div>
     </section>
