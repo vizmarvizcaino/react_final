@@ -5,10 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Img6 from '../../assets/portfolio6.jpg'
 import '../material-ui/materialui.css';
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard({img, title, description}) {
   return (
     <Card sx={{ maxWidth: 345 }} className='card'>
       <CardMedia
@@ -16,14 +15,14 @@ export default function ImgMediaCard() {
         component="img"
         alt=""
         height="140"
-        image={Img6}
+        image={img}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Formulario de Registro
+          {title}
         </Typography>
         <Typography variant="body2" color="white">
-            JavaScript, Css, React, Html, Material-Ui, Bootstrap.
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
