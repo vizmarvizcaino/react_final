@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import '../material-ui/materialui.css';
 
-export default function ImgMediaCard({ img, title, description }) {
+export default function ImgMediaCard({ img, title, description, github, proyect }) {
   return (
     <article className="portfolio__item">
       <Card sx={{ maxWidth: 345 }} className='card'>
@@ -28,8 +28,8 @@ export default function ImgMediaCard({ img, title, description }) {
         </CardContent>
         <CardActions>
           <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://vercel.com" className='btn' target='_blank'>Proyects</a>
+            <a href={github} className='btn' target='_blank'>Github</a>
+            <a href={proyect} className='btn' target='_blank'>Proyects</a>
           </div>
         </CardActions>
       </Card>

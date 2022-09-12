@@ -142,7 +142,7 @@ const FormularioPrincipal = () => {
 
         <ContenedorBotonCentrado>
           <Boton type='submit'>Enviar</Boton>
-          {formularioValido === true && <MensajeExito>El fomrulario se envio exitosamente</MensajeExito>}
+          {formularioValido === true && <MensajeExito>Vuelva a ingresar los datos correctamente</MensajeExito>}
         </ContenedorBotonCentrado>
       </Formulario>
     </main>
