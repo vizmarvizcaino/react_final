@@ -1,19 +1,17 @@
-import { React, useState } from 'react'
+import { React, useState, useContext } from 'react'
 import {
   Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito,
-  MensajeError
-} from '../../../elementos -formularios/Formularios';
-import Inputs from '../../contact/formulario/Inputs';
-
-
+  MensajeError, H2
+} from '../../elementos -formularios/Formularios';
+import { TaskContext } from '../context/TaskContext';
+import Inputs from './Inputs';
 
 const FormularioPrincipal = () => {
-  const [usuario, setUsuario] = useState({ campo: '', valido: 'true' })
+  const { user, setUser, users, setUsers, name, setName } = useContext(TaskContext)
   const [nombre, setNombre] = useState({ campo: '', valido: null })
   const [password, setPassword] = useState({ campo: '', valido: null })
   const [password2, setPassword2] = useState({ campo: '', valido: null })
   const [correo, setCorreo] = useState({ campo: '', valido: null })
-  const [telefono, setTelefono] = useState({ campo: '', valido: null })
   const [terminos, setTerminos] = useState(false)
   const [formularioValido, setformularioValido] = useState(null)
 
@@ -52,22 +50,23 @@ const FormularioPrincipal = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
+    if (user === 'vizmar.vizcaino@gmail.com') {
+      setUsers(true)
+    }
     if (
-      usuario.valido === 'true' &&
       nombre.valido === 'true' &&
       password.valido === 'true' &&
       password2.valido === 'true' &&
       correo.valido === 'true' &&
-      telefono.valido === 'true' &&
       terminos
     ) {
       setformularioValido(true)
-      setUsuario({ campo: '', valido: '' })
       setNombre({ campo: '', valido: '' })
       setPassword({ campo: '', valido: '' })
       setPassword2({ campo: '', valido: '' })
       setCorreo({ campo: '', valido: '' })
-      setTelefono({ campo: '', valido: '' })
+      setUser(correo.campo)
+      setName(nombre.campo)
     } else {
       setformularioValido(false)
     }
@@ -76,17 +75,9 @@ const FormularioPrincipal = () => {
 
   return (
     <main>
+
+      <H2>Ingresa los datos de autenticacion</H2>
       <Formulario action="" onSubmit={onSubmit}>
-        <Inputs
-          estado={usuario}
-          cambiarEstado={setUsuario}
-          tipo='text'
-          label='Usuario'
-          placeholder='john123'
-          name='usuario'
-          leyenda='El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.'
-          expresionesRegulares={expresiones.usuario}
-        />
 
         <Inputs
           estado={nombre}
@@ -97,27 +88,6 @@ const FormularioPrincipal = () => {
           name='usuario'
           leyenda='El nombre solo puede contener letras y espacios.'
           expresionesRegulares={expresiones.nombre}
-        />
-
-        <Inputs
-          estado={password}
-          cambiarEstado={setPassword}
-          tipo='password'
-          label='contarsena'
-          placeholder='john Doe'
-          name='password1'
-          leyenda='La contrasena tiene que ser de 4 a 12 digitos'
-          expresionesRegulares={expresiones.password}
-        />
-
-        <Inputs
-          estado={password2}
-          cambiarEstado={setPassword2}
-          tipo='password'
-          label='Repetir Contarsena'
-          name='password2'
-          leyenda='Ambas contrasena deben ser iguales.'
-          funcion={validarPassword2}
         />
 
         <Inputs
@@ -132,26 +102,36 @@ const FormularioPrincipal = () => {
         />
 
         <Inputs
-          estado={telefono}
-          cambiarEstado={setTelefono}
-          tipo='text'
-          label='Telefono'
-          placeholder='34325354353453'
-          name='telefono'
-          leyenda='El numero de telefono debe tener minimo 7 caracteres y maximo 14.'
-          expresionesRegulares={expresiones.telefono}
+          estado={password}
+          cambiarEstado={setPassword}
+          tipo='password'
+          label='contarsena'
+          placeholder='Ingrese su contraseña'
+          name='password1'
+          leyenda='La contrasena tiene que ser de 4 a 12 digitos'
+          expresionesRegulares={expresiones.password}
+        />
+
+        <Inputs
+          estado={password2}
+          cambiarEstado={setPassword2}
+          tipo='password'
+          label='Repetir Contarsena'
+          name='password2'
+          leyenda='Ambas contrasena deben ser iguales.'
+          funcion={validarPassword2}
         />
         <div>
-        <ContenedorTerminos >
-          <Label>
-            <input type="checkbox"
-              name="terminos" id="terminos"
-              checked={terminos}
-              onChange={onChangeTerminos}
-            />
-            Acepto los Terminos y Condiciones
-          </Label>
-        </ContenedorTerminos>
+          <ContenedorTerminos >
+            <Label>
+              <input type="checkbox"
+                name="terminos" id="terminos"
+                checked={terminos}
+                onChange={onChangeTerminos}
+              />
+              Acepto los Terminos y Condiciones
+            </Label>
+          </ContenedorTerminos>
         </div>
 
         {formularioValido === false && <MensajeError>
@@ -164,9 +144,7 @@ const FormularioPrincipal = () => {
           <Boton type='submit'>Enviar</Boton>
           {formularioValido === true && <MensajeExito>El fomrulario se envio exitosamente</MensajeExito>}
         </ContenedorBotonCentrado>
-
       </Formulario>
-
     </main>
   )
 }

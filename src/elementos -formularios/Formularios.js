@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import ImgTexture from '../assets/bg-texture.png'
 
 const colores = {
   borde: "#0075FF",
@@ -34,16 +33,22 @@ const GrupoInput = styled.div`
     z-index: 90;
 `;
 
+const H2 = styled.h2`
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+`;
+
 const Input = styled.input`
     width: 100%;
     background: #fff;
     background-color: green;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 45px;
     line-height: 45px;
     padding: 0 40px 0 10px;
     transition: .3s easy all;
-    border: 3px solid var(--color-white);
+    border: 3px solid var(--color-primary);
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     background: var(--color-bg);
@@ -166,5 +171,6 @@ export {
   ContenedorBotonCentrado,
   Boton,
   MensajeExito,
-  MensajeError
+  MensajeError,
+  H2
 }

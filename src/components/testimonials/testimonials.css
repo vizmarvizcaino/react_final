@@ -1,0 +1,11 @@
+.testimonials-text {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

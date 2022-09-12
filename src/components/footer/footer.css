@@ -1,0 +1,21 @@
+.containers {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  text-align: center;
+  padding: 20px;
+}
+
+.containers__socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.containers__socials a {
+  color: var(--color-bg);
+  margin-top: .5rem;
+}
+
+.socials-icons {
+  font-size: 2rem;
+}

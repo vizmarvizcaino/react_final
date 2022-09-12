@@ -1,5 +1,18 @@
 .portfolio__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.portfolio__item {
+  background: var(--color-bg-variant);
+  gap: 4rem;
+  padding: 1.3rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+
+.portfolio__item:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
 }

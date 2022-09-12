@@ -1,4 +1,5 @@
 import React from 'react'
+import NavPrincipal from '../header/navprincipal/NavPrincipal'
 import About from '../about/About'
 import Contact from '../contact/Contact'
 import Experience from '../experience/Experience'
@@ -8,19 +9,21 @@ import Nav from '../nav/Nav'
 import Portfolio from '../portfolio/Portfolio'
 import Services from '../services/Services'
 import Testimonials from '../testimonials/Testimonials'
+import PeticionApi from '../dataubicacion/PeticionFetch'
 
 const Home = () => {
   return (
     <>
-    <Header />
-    <Nav/>
-    <About />
-    <Experience />
-    <Services />
-    <Portfolio />
-    <Testimonials />
-    <Contact />
-    <Footer />
+      <PeticionApi />
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </>
   )
 }

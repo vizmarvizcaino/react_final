@@ -1,18 +1,18 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-    color: var(--color-primary);
-    margin-top: -50px;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-primary);
+  margin-top: -50px;
+  margin-bottom: 50px;
 }
 
 .logo {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    letter-spacing: .2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: .2rem;
 }

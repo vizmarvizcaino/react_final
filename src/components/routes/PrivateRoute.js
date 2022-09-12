@@ -1,12 +1,12 @@
-import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { TaskContext } from '../context/TaskContext';
+import { Route } from 'react-router-dom'
 
-const PrivateRoute = ({element: Element, componen: Component, ...rest}) => {
-  const user = true;  
+const PrivateRoute = ({ element: Element, componen: Component, ...rest }) => {
+  const { users } = useContext(TaskContext)
   return (
-   
     <Route {...rest}>
-      {user ? (Element) : (<Component/>)}
+      {users ? (Element) : (<Component />)}
     </Route>
   )
 }
