@@ -31,3 +31,15 @@ nav a.active {
   background: var(--color-bg);
   color: var(--color-white);
 }
+
+@media screen and (max-width: 1024px) {
+  nav {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    left: 50%;
+  }
+}

@@ -18,7 +18,6 @@ function PeticionApi() {
   async function requestApi() {
     const datas = await getCoursesApi()
     setData(datas)
-    console.log(datas)
   }
 
   useEffect(() => {

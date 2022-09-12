@@ -3,7 +3,6 @@ import { Label, GrupoInput, Input, LeyenedaError, IconValidacion } from '../../e
 
 const Inputs = ({ estado, cambiarEstado, tipo, label, placeholder, name, leyenda, expresionesRegulares, funcion }) => {
   const onChange = (e) => {
-    console.log(e.target.value)
     cambiarEstado({ ...estado, campo: e.target.value })
   }
 
