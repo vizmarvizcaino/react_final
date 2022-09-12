@@ -16,3 +16,15 @@
   border-color: var(--color-primary-variant);
   background: transparent;
 }
+
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+  }
+}
